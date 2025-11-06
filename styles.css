@@ -108,11 +108,33 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-pink) 100%);
+    background-image: url('images/inicio.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 6rem 0;
     min-height: 80vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-pink) 100%);
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-content {
@@ -120,9 +142,12 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text {
+    position: relative;
     z-index: 2;
 }
 
@@ -335,9 +360,31 @@ section {
 
 /* CTA Section */
 .cta {
-    background: linear-gradient(135deg, var(--color-dark-red) 0%, var(--color-pink) 100%);
+    background-image: url('images/inicio.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     color: var(--color-white);
     text-align: center;
+    position: relative;
+    padding: 6rem 0;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-dark-red) 0%, var(--color-pink) 100%);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.cta .container {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-content h2 {
